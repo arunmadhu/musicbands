@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using musicbands.Models;
 using musicbands.Models.ui;
+using musicbands.services;
+using musicbands.translator;
 using Newtonsoft.Json;
 
 namespace musicbands.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IFestivalServices service;
+
+        public HomeController(IFestivalServices _service)
+        {
+            service = _service;
+        }
         public IActionResult Index()
         {
             return View();
@@ -25,8 +33,13 @@ namespace musicbands.Controllers
 
         public JsonResult GetTreeData()
         {
-            var model = new LabelModel();
-            return Json(model.GetTreeModel());
+            var apidata = service.GetFestivals();
+            var translator = new Transltor();
+
+            return Json(translator.TranslateFesticalApi(apidata));
+
+            //var model = new LabelModel();
+            //return Json(model.GetTreeModel());
         }
 
         public IActionResult Contact()

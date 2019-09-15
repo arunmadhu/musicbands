@@ -11,3 +11,7 @@
 /InfyTest/TestProjects/bin/Debug
 /InfyTest/musicbands/.vs/musicbands/v16/Server/sqlite3/storage.ide-wal
 /InfyTest/musicbands/.vs/musicbands/v16/Server/sqlite3/storage.ide-shm
+/InfyTest/musicbands/.vs/musicbands/v16/TestStore/0
+/InfyTest/TestProjects/obj/Release
+/InfyTest/UnitTestCases/obj
+/InfyTest/UnitTestCases/bin/Debug/netcoreapp2.1

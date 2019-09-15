@@ -3,15 +3,15 @@
     "",
     "\\InfyTest",
     "\\InfyTest\\musicbands",
-    "\\InfyTest\\musicbands\\Controllers",
-    "\\InfyTest\\musicbands\\Models",
-    "\\InfyTest\\musicbands\\Models\\ui",
-    "\\InfyTest\\musicbands\\Repository",
+    "\\InfyTest\\musicbands\\services",
+    "\\InfyTest\\musicbands\\translator",
     "\\InfyTest\\musicbands\\wwwroot",
     "\\InfyTest\\musicbands\\wwwroot\\lib",
     "\\InfyTest\\musicbands\\wwwroot\\lib\\jquery",
-    "\\InfyTest\\musicbands\\wwwroot\\lib\\jquery\\dist"
+    "\\InfyTest\\musicbands\\wwwroot\\lib\\jquery\\dist",
+    "\\InfyTest\\TestProjects",
+    "\\InfyTest\\UnitTestCases"
   ],
-  "SelectedNode": "\\InfyTest\\musicbands\\musicbands.csproj",
+  "SelectedNode": "\\InfyTest\\UnitTestCases\\HomeControllerTest.cs",
   "PreviewInSolutionExplorer": false
 }

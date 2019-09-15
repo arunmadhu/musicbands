@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using musicbands.Models;
 using musicbands.Models.ui;
+using Newtonsoft.Json;
 
 namespace musicbands.Controllers
 {
@@ -19,9 +20,13 @@ namespace musicbands.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "The band record lable heirarchy is shown below...";
+            return View();
+        }
 
+        public JsonResult GetTreeData()
+        {
             var model = new LabelModel();
-            return View(model.GetTreeModel());
+            return Json(model.GetTreeModel());
         }
 
         public IActionResult Contact()

@@ -4,3 +4,10 @@
 
 /.vs/slnx.sqlite-journal
 *.sqlite
+/InfyTest/musicbands/bin/Debug/netcoreapp2.1
+/InfyTest/musicbands/packages
+/InfyTest/musicbands/obj
+/InfyTest/TestProjects/obj/Debug
+/InfyTest/TestProjects/bin/Debug
+/InfyTest/musicbands/.vs/musicbands/v16/Server/sqlite3/storage.ide-wal
+/InfyTest/musicbands/.vs/musicbands/v16/Server/sqlite3/storage.ide-shm

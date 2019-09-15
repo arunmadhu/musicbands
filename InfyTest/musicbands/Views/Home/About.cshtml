@@ -1,44 +1,32 @@
-﻿@model musicbands.Models.ui.TreeView
-
-@{
+﻿@{
     ViewData["Title"] = "Festivals";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<table width="500px" style="padding:5px">
-    <colgroup>
-        <col width="30%" />
-        <col width="30%" />
-        <col width="40%" />
-    </colgroup>
-    @foreach (musicbands.Models.ui.RecordLabel lbl in Model.Labels)
-    {
-        <tr>
-            <td colspan="3">
-                <span>@lbl.Name</span>
-            </td>
-        </tr>
+<span style="text-decoration:underline">Music band data</span>
+<br />
+<br />
 
-        @foreach (musicbands.Models.ui.Band bd in Model.Bands.Where(bd => bd.Label.Id == lbl.Id).Distinct())
-        {
-            <tr>
-                <td></td>
-                <td>
-                    <span>@bd.Name</span>
-                </td>
-            </tr>
+<div id="jstreesimple">
 
-            @foreach (musicbands.Models.ui.Festival fs in Model.Festivals.Where(fs => fs.Bands.Any(bdi => bdi.Id == bd.Id)).Distinct())
-            {
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <span>@fs.Name</span>
-                    </td>
-                </tr>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            dataType: 'json',
+            url: '@Url.Action("GetTreeData", "Home")',
+            success: function (data) {
+
+                $('#jstreesimple')
+                    .jstree({
+                        'core': { 'data': data }
+                    })
+                     .bind("ready.jstree", function (event, data) {
+                        $(this).jstree("open_all");
+                    });
             }
-        }
-    }
-</table>
+        });
+    });
+</script>

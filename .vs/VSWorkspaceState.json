@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\InfyTest",
+    "\\InfyTest\\musicbands",
+    "\\InfyTest\\musicbands\\Controllers",
+    "\\InfyTest\\musicbands\\Models",
+    "\\InfyTest\\musicbands\\Models\\ui",
+    "\\InfyTest\\musicbands\\Repository",
+    "\\InfyTest\\musicbands\\wwwroot",
+    "\\InfyTest\\musicbands\\wwwroot\\lib",
+    "\\InfyTest\\musicbands\\wwwroot\\lib\\jquery",
+    "\\InfyTest\\musicbands\\wwwroot\\lib\\jquery\\dist"
+  ],
+  "SelectedNode": "\\InfyTest\\musicbands\\musicbands.csproj",
+  "PreviewInSolutionExplorer": false
+}
